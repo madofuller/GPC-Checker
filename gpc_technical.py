@@ -1,6 +1,6 @@
 import asyncio
 import re
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 
 
 async def check_gpc_compliance(url: str) -> dict:
