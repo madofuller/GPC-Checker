@@ -4,7 +4,14 @@ import asyncio
 from gpc_technical import check_gpc_compliance, score_technical_compliance
 from gpc_policy import find_privacy_policy_url, get_policy_text, analyze_policy_text_llm
 import os
+from playwright.__main__ import main as playwright_main
 
+
+# Check if Playwright browsers are installed
+if not os.path.exists(os.path.expanduser("~/.cache/ms-playwright")):
+    print("Installing Playwright browsers...")
+    playwright_main(["install", "chromium"])  # Install Chromium browser
+    
 # Optionally, load environment variables from a .env file
 from dotenv import load_dotenv
 load_dotenv()
