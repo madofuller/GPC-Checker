@@ -1,6 +1,5 @@
 streamlit
 playwright
-playwright install
 requests
 beautifulsoup4
 openai
