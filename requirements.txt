@@ -1,0 +1,7 @@
+streamlit
+playwright
+requests
+beautifulsoup4
+openai
+asyncio
+python-dotenv
