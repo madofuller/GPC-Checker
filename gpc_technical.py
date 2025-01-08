@@ -1,18 +1,7 @@
 import asyncio
 import re
-import os
 from playwright.sync_api import sync_playwright
 
-# Ensure Playwright browsers are installed
-def install_playwright_browsers():
-    from playwright._impl._installer import install
-    cache_dir = os.path.expanduser("~/.cache/ms-playwright")
-    if not os.path.exists(cache_dir):
-        print("Installing Playwright browsers...")
-        install(cache_dir)
-
-# Run the installation check
-install_playwright_browsers()
 
 async def check_gpc_compliance(url: str) -> dict:
     """
